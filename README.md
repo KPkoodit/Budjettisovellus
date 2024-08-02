@@ -12,7 +12,7 @@ The app allows users to add expenses into self created categories and provides g
 ## General info
 Desktop application that allows user to add expenses and track their spending. Some features of the application:
 * Adding new users including nickname and maximum budget
-* Choosing who is using the app
+* Choosing a profile from all the created ones
 * Adding expenses including name, price, date, category, user and description 
 * Adding new categories
 * Modifying and removing expenses and categories
