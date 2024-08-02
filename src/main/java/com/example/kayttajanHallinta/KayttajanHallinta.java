@@ -3,8 +3,6 @@ package com.example.kayttajanHallinta;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +17,6 @@ import com.example.model.Kayttaja;
 public class KayttajanHallinta {
     private static KayttajanHallinta INSTANCE = null;
     private Kayttaja kirjautunutKayttaja = null;
-    private final String edellisenID = "com/example/edellisenKayttajanID.txt";
     private final Path externalFilePath = Paths.get("edellisenKayttajanID.txt");
 
     private KayttajanHallinta() {
@@ -68,14 +65,6 @@ public class KayttajanHallinta {
         if (Files.exists(externalFilePath)) {
             // Read the ID from the external file if it exists
             try (BufferedReader reader = Files.newBufferedReader(externalFilePath)) {
-                kayttajaID = Integer.parseInt(reader.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            // Fall back to reading the ID from the JAR resource
-            try (InputStream is = getClass().getClassLoader().getResourceAsStream(edellisenID);
-                 BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
                 kayttajaID = Integer.parseInt(reader.readLine());
             } catch (IOException e) {
                 e.printStackTrace();

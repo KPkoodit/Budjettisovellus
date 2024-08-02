@@ -95,9 +95,10 @@ public class EtusivuController implements ViewController{
 	 * A method for selecting the active profile.
 	 */
 	public void valitseKayttaja() {
-		int valittuKayttaja = profiiliBox.getSelectionModel().getSelectedIndex() +1;
-        kayttajanhallinta.kirjoitaKayttajaID(valittuKayttaja);
-        kayttajanhallinta.setKirjautunutKayttaja(kontrolleri.getKayttaja(valittuKayttaja));
+		String valittuKayttaja = profiiliBox.getSelectionModel().getSelectedItem();
+		int kayttajaID = kontrolleri.getKayttajaID(valittuKayttaja);
+        kayttajanhallinta.kirjoitaKayttajaID(kayttajaID);
+        kayttajanhallinta.setKirjautunutKayttaja(kontrolleri.getKayttaja(kayttajaID));
         System.out.println("Logging in user: " + valittuKayttaja);
         paivitaTervehdys();
         vh.paivitaSisalto();

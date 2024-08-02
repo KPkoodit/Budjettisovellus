@@ -83,13 +83,7 @@ public class KayttajanLuontiController implements ViewController {
         	vh.getKontrolleri().lisaaKayttaja(username, budjetti);
             vh.getKontrolleri().lisaaKategoria("Yleinen", username);
             
-            int haluttuId = -1;
-            List<String> kayttajat = vh.getKontrolleri().getKayttajat();
-            for(int i = 0; i < kayttajat.size(); i++) {
-            	if(kayttajat.get(i).equals(username)){
-            		haluttuId = (i+1);
-            	}           	
-            }
+            int haluttuId = vh.getKontrolleri().getKayttajaID(username);
             
             kayttajanhallinta.kirjoitaKayttajaID(haluttuId);
             System.out.println(haluttuId);

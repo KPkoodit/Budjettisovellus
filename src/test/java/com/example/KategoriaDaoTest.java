@@ -18,6 +18,7 @@ public class KategoriaDaoTest {
 
     private KategoriaDao kategoriaDao;
 
+
     @Before
     public void setUp() throws Exception {
         kategoriaDao = new KategoriaDao();
@@ -25,6 +26,10 @@ public class KategoriaDaoTest {
 
     @Test
     public void testHaeKategoriat() {
+        //Luodaan testikäyttäjä ja testikategoria siltä varalta, että tietokanta sattuu olemaan tyhjä
+        Kategoria testikategoria = new Kategoria("Yleinen", "Testikayttaja"); 
+        kategoriaDao.lisaaKategoria(testikategoria);
+        
         List<Kategoria> kategoriat = kategoriaDao.haeKategoriaLista();
         
         //Testataan, ettei kategorialista ole null tai tyhjä.
@@ -40,6 +45,7 @@ public class KategoriaDaoTest {
             }
         }
         assertTrue("Kategoria listasta ei löydy yleiskategoriaa 'Yleinen'", loytyiYleinen);
+        kategoriaDao.poistaKategoria(testikategoria.getKategoriaID());
     }
     
     @Test

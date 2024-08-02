@@ -10,7 +10,6 @@ import com.example.dataAccessObjects.KuluDao;
 import com.example.model.Kategoria;
 import com.example.model.Kayttaja;
 import com.example.model.Kulu;
-import com.example.model.ListModel;
 import com.example.view.IGUI;
 
 public class Kontrolleri implements IKontrolleri {
@@ -20,10 +19,8 @@ public class Kontrolleri implements IKontrolleri {
 	private Kategoria kategoria;
 	private Kayttaja kayttaja;
 	private Kulu kulu;
-	private ListModel listModel;
 	
 	public Kontrolleri(IGUI gui) {
-		listModel =  new ListModel();
 	}
 	
 	public List<Kulu> getKulut(int kayttajaid) {
@@ -74,6 +71,17 @@ public class Kontrolleri implements IKontrolleri {
 			kayttajaNimet.add(k.getNimimerkki());
 		}
 		return kayttajaNimet;
+	}
+
+	public int getKayttajaID(String kayttajanimi){
+		int etsittyID = -1;
+		List<Kayttaja> kayttajaObjektit = kayttajaDao.haeKayttajaLista();
+		for(Kayttaja k : kayttajaObjektit) {
+			if(k.getNimimerkki().equals(kayttajanimi)) {
+				etsittyID = k.getKayttajaID();
+			}
+		}
+		return etsittyID;
 	}
 	
 	public List<String> getKategorianimet(String omistaja) {
@@ -150,11 +158,6 @@ public class Kontrolleri implements IKontrolleri {
 		kategoriaDao.poistaKategoria(id);
 		return true;
 	}
-	
-	public ListModel getListModel() {
-        return listModel;
-    }
-
 
 	public void setKategoriaDao(KategoriaDao kategoriaDao) {
 		this.kategoriaDao = kategoriaDao;

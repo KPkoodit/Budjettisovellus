@@ -5,7 +5,6 @@ import java.util.List;
 import com.example.model.Kategoria;
 import com.example.model.Kayttaja;
 import com.example.model.Kulu;
-import com.example.model.ListModel;
 
 import java.time.LocalDate;
 
@@ -61,6 +60,13 @@ public interface IKontrolleri {
      */
 	public abstract List<String> getKayttajat();
 	
+     /**
+      * Retrieves an ID for a username
+      * @param kayttajanimi
+      * @return ID for the user
+      */
+      public abstract int getKayttajaID(String kayttajanimi);
+
 	/**
      * Retrieves a list of category names for a specific user.
      * @param omistaja The owner of the categories.
@@ -149,7 +155,5 @@ public interface IKontrolleri {
      * @return A string containing the shopping list data.
      * @throws Exception If there is an issue with the request.
      */
-	
-	public abstract ListModel getListModel();
 	
 }

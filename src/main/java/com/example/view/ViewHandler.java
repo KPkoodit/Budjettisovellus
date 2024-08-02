@@ -195,7 +195,7 @@ public class ViewHandler implements IGUI{
 	 * Sets the newly created user as active user or keeps the active user as same if no new user is created.
 	 */
 	public void onkoKayttajaa() {
-		if (kontrolleri.getKayttaja(1) == null) {
+		if (kontrolleri.getKayttajat().isEmpty()) {
 			luoUusiKayttaja();
 		}
 		paivitaKayttaja();
