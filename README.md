@@ -17,7 +17,8 @@ Desktop application that allows user to add expenses and track their spending. S
 * Adding new categories
 * Modifying and removing expenses and categories
 * Viewing expenses in chart and filtering expenses by category
-* Viewing spending habits through graphs
+* Viewing spending habits through graphs  
+
 In documents folder, you can find a manual and documentation for the application in pdf format.
 
 ## Additional info
