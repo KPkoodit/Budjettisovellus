@@ -46,12 +46,10 @@ Update the persistence.xml file located in the META-INF folder with your databas
 * property: javax.persistence.jdbc.user -> your_username
 * property: javax.persistence.jdbc.password -> your_password
 
-After this the application can be run using Eclipse or other IDE. Class MainView contains the main class of the newest version of the application, so this is the class you should run. Class Main contains the old graphic user interface.
+After this, the application can be run using Eclipse or other IDE. Class MainView contains the main class of the newest version of the application, so this is the class you should run. Class Main contains the old graphic user interface.
 
-Alternatively the application can be run through command line. However there has been some issues with this, so for now it's better to run the application using IDE.
-
-To run the application through command line, ensure that Maven is installed and added to system's PATH environment variable. Open a command prompt or terminal and navigate to the root directory of the application. Then type the following commands (before running the third command, change the module path of the command to match a real javafx module path of your device):
+Alternatively the application can be run through command line. To run the application through command line, ensure that Maven is installed and added to system's PATH environment variable. Open a command prompt or terminal and navigate to the root directory of the application. Then type the following commands (before running the third command, change the module path of the command to match a real javafx module path of your device):
 *	mvn compile
 *	mvn package
-*   java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml -jar target/projekti-0.0.1-SNAPSHOT.jar
+* java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml -jar target/projekti-0.0.1-SNAPSHOT.jar
 
