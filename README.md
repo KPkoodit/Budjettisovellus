@@ -19,7 +19,7 @@ Desktop application that allows user to add expenses and track their spending. S
 * Viewing expenses in chart and filtering expenses by category
 * Viewing spending habits through graphs  
 
-In documents folder, you can find a manual and documentation for the application in pdf format.
+In documents folder, you can find a manual and documentation for the application in PDF format. Sometimes Github has problems opening large PDFs. If this happens, waiting for a while the page open and refreshing the page after waiting helps. Another option is to download a raw version of the document.
 
 ## Additional info
 Some functionalities (Ostoslista and Muistilista) of this version of the program have been removed from the front page because they require a paid API-key from OpenAi. Functionalities are still visible in the manual found under documents but they cannot be used anymore.
