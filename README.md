@@ -4,10 +4,10 @@ The app allows users to add expenses into self created categories and provides g
 
 ## Team
 
-* Wille Pulkkinen
-* Hanne Salmi
-* Minna Karhu
-* Katja Peltonen
+* Wille
+* Hanne
+* Minna
+* Katja
 
 ## General info
 Desktop application that allows user to add expenses and track their spending. Some features of the application:
