@@ -9,6 +9,12 @@ The app allows users to add expenses into self created categories and provides g
 * Minna
 * Katja
 
+### My Responsibilities
+
+* I was responsible for backend functionalities enabling users to change expense categories, edit and delete categories, and filter expenses by category and time.
+* Frontend refactoring and modernization using SceneBuilder.
+* Continuous testing and bug fixing, in which everyone participated.
+
 ## General info
 Desktop application that allows user to add expenses and track their spending. Some features of the application:
 * Adding new userprofiles including nickname and maximum budget
