@@ -9,7 +9,7 @@ The app allows users to add expenses into self created categories and provides g
 * Minna
 * Katja
 
-### My Responsibilities
+#### My Responsibilities
 
 * I was responsible for backend functionalities enabling users to change expense categories, edit and delete categories, and filter expenses by category and time.
 * Frontend refactoring and modernization using SceneBuilder.
